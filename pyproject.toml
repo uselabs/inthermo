@@ -1,0 +1,19 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "inthermo"
+version = "0.0.1"
+description = ""
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.9"
+authors = [{ name = "Juan Manuel Mauricio", email = "jmmauricio6@gmail.com" }]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/inthermo"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
