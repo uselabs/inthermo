@@ -10,6 +10,15 @@ readme = "README.md"
 license = { file = "LICENSE" }
 requires-python = ">=3.9"
 authors = [{ name = "Juan Manuel Mauricio", email = "jmmauricio6@gmail.com" }]
+dependencies = ["numpy"]
+
+# FeniCSx (dolfinx, gmsh, petsc4py, mpi4py) is NOT pip-installable on most
+# platforms and is provided by the runtime environment (conda-forge or the
+# dolfinx/dolfinx Docker image -- see README / Dockerfile), so it is
+# intentionally not listed here.
+[project.optional-dependencies]
+test = ["pytest"]
+docs = ["sphinx", "myst-parser", "furo"]
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/inthermo"]

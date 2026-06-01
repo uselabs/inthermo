@@ -216,3 +216,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# inthermo simulation outputs (ParaView / FEniCSx)
+*.xdmf
+*.h5
+*.bp
+*.vtu
+*.pvd
